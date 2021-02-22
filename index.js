@@ -42,7 +42,6 @@ app.get('/weather/:latlon', async (request, response) => {
   const lon = latlon[1];
   console.log(lat, lon);
 
-  //const weather_url = `https://api.openweathermap.org/data/2.5/weather?lat=-23.59&lon=-46.65&appid=eff4ca94d43cad7b0275d4c60ef0bb46`;
   const api_key = process.env.API_KEY;
   const weather_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${api_key}`;
   const weather_response = await fetch(weather_url);
